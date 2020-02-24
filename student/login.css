@@ -1,0 +1,32 @@
+.textbox
+{
+    margin: auto;
+    margin-bottom: 15px;
+    display: block;
+    width: 232px;
+}
+#login
+{
+    margin: auto;
+    margin-top: 20px;
+    width: 232px;
+    display: block;
+}
+#signup
+{
+    margin: auto;
+    margin-top: 5px;
+    width: 232px;
+    display: block;
+
+}
+.wrong-cred
+{
+    color: rgb(255, 0, 64);
+    margin-top: 20px;
+    width: auto;
+    text-align: center;
+    font-size: 15px;
+    display: none;
+}
+

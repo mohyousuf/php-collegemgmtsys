@@ -1,0 +1,1285 @@
+@keyframes message
+{
+    0%
+    {
+    }
+    100%
+    {
+        opacity: 0;
+    }
+}
+*
+{
+    font-family: 'Asap', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+html, body {
+    height: 100%;
+    min-height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: rgb(248, 248, 248);
+}
+
+[alt="www.000webhost.com"]
+{
+    display: none;
+}
+.middle
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/******** TEXT BOX ********/
+.textbox
+{
+    outline: none;
+    border-radius: 5px;
+    border-width: 0;
+    font-size: 13px;
+    background-color:rgb(255, 255, 255) ;
+    padding: 10px 17px 10px 17px;
+    color: rgb(110, 110, 110);
+    transition: 0.2s;
+}
+.textbox:hover,.textbox:focus
+{
+    box-shadow: 0 0 7px 0 #d8d8d8;
+    color: black;
+}
+.textbox2
+{
+    outline: none;
+    border: none;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 13px;
+    background-color:rgb(255, 255, 255) ;
+    padding: 12px 0;
+    color: rgb(110, 110, 110);
+    transition: 0.2s;
+}
+.textbox2:hover,.textbox2:focus
+{
+    /*box-shadow: 0 0 7px 0 #d8d8d8;*/
+    color: black;
+}
+.label-field
+{
+    border-bottom: 2px solid #61616100;
+    transition: border-bottom-color .3s;
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.label-field:focus-within
+{
+    border-bottom: 2px solid #00c3ff;
+}
+.textbox4
+{
+    outline: none;
+    border: none;
+    font-size: 13px;
+    background-color:rgba(29, 29, 29, 0) ;
+    padding: 10px 0;
+    color: #858585;
+    transition: 0.2s;
+}
+.textbox4:hover,.textbox4:focus
+{
+    color: rgb(255, 255, 255);
+    border-color: #858585;
+}
+::placeholder 
+{
+    color: rgb(202, 202, 202);
+}
+
+
+/********** BUTTONS *********/
+
+.btn-light
+{
+    background-color: rgb(9, 205, 240);
+    color: rgb(255, 255, 255);
+    border-width: 0;
+    border-radius: 5px;
+    font-size: 13px;
+    padding: 10px 15px 10px 15px;
+    outline: none;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.btn-light:hover
+{
+    background-color: rgb(9, 170, 199);
+    box-shadow: 0 0 7px 0 #d8d8d8;
+}
+
+.btn-light:active
+{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    box-shadow: 0 0 7px 0 #888888;
+}
+
+.btn-dark
+{
+    background-color: rgb(43, 43, 43);
+    color: rgb(255, 255, 255);
+    border-width: 0;
+    border-radius: 5px;
+    font-size: 13px;
+    padding: 10px 15px 10px 15px;
+    outline: none;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.btn-dark:hover
+{
+    background-color: rgb(24, 24, 24);
+    box-shadow: 0 0 7px 0 #d8d8d8;
+}
+
+.btn-dark:active
+{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    box-shadow: 0 0 7px 0 #888888;
+}
+
+.unchecked
+{
+    background-color: rgb(238, 238, 238);
+    color: rgb(29, 29, 29);
+    border-width: 0;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px 15px 10px 15px;
+    outline: none;
+    font-weight: 600;
+    transition: 0.2s;
+}
+.unchecked::before
+{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    content: '\f067';
+    margin-right: 10px;
+
+}
+.unchecked:hover
+{
+    background-color: rgb(9, 205, 240);    
+    color: white;
+    box-shadow: 0 0 7px 0 #d8d8d8;
+}
+
+.unchecked:active
+{
+    background-color: rgb(9, 170, 199);
+    box-shadow: 0 0 7px 0 #888888;
+}
+.checked
+{
+    background-color: rgb(9, 205, 240);    
+    border-width: 0;   
+    color: white;
+    border-radius: 5px;
+    font-size: 13px;
+    padding: 10px 15px 10px 15px;
+    outline: none;
+    font-weight: 600;
+    transition: 0.2s;
+}
+.checked::before
+{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+    content: '\f067';
+}
+.checked:hover
+{
+    background-color: rgb(9, 170, 199);
+    box-shadow: 0 0 7px 0 #d8d8d8;
+}
+
+.checked:active
+{
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0 0 7px 0 #888888;
+}
+
+
+#new-content
+{
+    overflow: hidden;
+    transition: max-height 0.9;
+    -o-transition: max-height 0.9s;
+    -webkit-transition: max-height 0.9s;
+    max-height: 90px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+#new-content::-webkit-scrollbar { 
+    display: none;
+}
+.new-content-field
+{
+    padding: 25px;
+}
+#new-content:target
+{
+    overflow: auto;
+    max-height: 800px;
+} 
+/*
+#new-content .btn-dark
+{
+    cursor: pointer;
+    float: right;
+}*/
+#btn-add-content.btn-dark
+{
+    bottom: 0;
+    border-radius: 0;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 800;
+    padding: 20px 0 20px 0;
+    margin: 0;
+    width: 100%;
+    cursor: pointer;
+}
+
+#new-content,.table-content
+{
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 4px 9px 0 #dcdcdc;
+    height: auto;
+    margin-bottom: 40px;
+}
+.schedule-container.schedule-container
+{
+    margin-bottom: 60px;
+}
+.table-content
+{
+    padding: 0;
+    margin-bottom: 60px;
+    overflow: hidden;
+}
+.table-content table
+{
+    border-radius: inherit;
+    overflow: hidden;
+}
+#new-content .checked, #new-content .unchecked
+{
+    display: inline-block;
+    width: auto;
+    margin-bottom: 10px;
+}
+.textbox3
+{
+    outline: none;
+    border: none;
+    font-size: 15px;
+    font-style: italic;
+    background:rgb(255, 255, 255, 0) ;
+    padding: 13px 17px 13px 17px;
+    color: rgb(110, 110, 110);
+    transition: 0.2s;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+}
+.textbox3:hover,.textbox3:focus
+{
+    color: black;
+}
+table
+{
+    width: 100%;
+    border-collapse: collapse;
+    cursor: default;
+}
+th
+{
+    font-size: 14px;
+    background:rgb(9, 205, 240);
+    text-transform: uppercase;
+    color: white;
+    height: 60px;
+    font-weight: 600;
+    min-width: 100px;
+}
+td
+{
+    empty-cells: hide;
+    font-size: 12px;
+    text-align: center;    
+    font-weight: 500;
+}
+tr
+{
+    background: rgb(245, 245, 245);
+    height: 38px;
+}
+tr button
+{
+    width: auto;
+    background: none;
+    padding: 3px;
+    color: rgb(39, 161, 218);
+    border: none;
+    text-decoration: underline;
+    cursor: pointer;
+    outline: none;
+    font-size: 12px;
+}
+tr button:hover
+{
+    color: rgb(14, 108, 151);
+}
+
+tr:nth-child(4n+2), tr:nth-child(4n+4)
+{
+    background: rgb(255, 255, 255);
+}
+tr:hover
+{
+    background: rgb(224, 224, 224);
+}
+
+
+nav
+{
+    left: 0;
+    top: 0;
+    position: fixed;
+    height: 100%;
+    background: rgb(255, 255, 255);
+    box-shadow: -15px 0px 25px 0 #888888;
+    display: grid;
+    grid-template-rows: 1fr 50px;
+}
+
+
+nav ul
+{
+    display: inline;
+    font-size: 13px;
+    position: relative;
+}
+
+nav li a
+{
+    padding: 17px 50px 17px 70px;
+    text-align: left;
+    display: block;
+    color: rgb(192, 192, 192);
+    transition: color 0.3s;
+}
+nav li a:hover,#navicon:hover
+{
+    color: rgb(68, 68, 68);
+}
+nav li a:active,#navicon:active
+{
+    transition: color 0.3s;
+    color: rgb(9, 205, 240);
+}
+
+nav li .selected
+{
+    color: rgb(9, 205, 240);
+    transition: color 0.3s;
+}
+nav li .selected:hover
+{
+    color: rgb(12, 187, 218);
+}
+nav a
+{
+    position: relative;
+}
+nav span
+{
+    overflow:hidden; 
+    white-space:nowrap; 
+    text-overflow: ellipsis;
+ }
+nav span::before
+{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    left: 40px;
+    bottom: 16.6px;
+    position: absolute;
+}
+#dashboard::before
+{
+    content: "\f0db"
+}
+#students::before
+{
+    content: "\f007";
+}
+#lecturers::before
+{
+    content: "\f508"
+}
+#books::before
+{
+    content: "\f02d"
+}
+#mybooks::before
+{
+    content: "\f02e"
+}
+#courses::before
+{
+    content: "\f022"
+}
+#modules::before
+{
+    content: "\f46b"
+}
+#batches::before
+{
+    content: "\f0c0"
+}
+#classrooms::before
+{
+    content: "\f52a"
+}
+#classschedules::before
+{
+    content: "\f073"
+}
+#markgrades::before
+{
+    content: "\f5c0"
+}
+#nav-announcements::before
+{
+    content: "\f0a1"
+}
+#assignments::before
+{
+    content: "\f0ae"
+}
+#materials::before
+{
+    content: "\f468"
+}
+#email::before
+{
+    content: "\f1d8"
+}
+
+nav > ul
+{
+    margin: 20px 0;
+    overflow-y: auto;
+}
+nav > ul::-webkit-scrollbar
+{
+    width: 4px;
+}
+nav > ul::-webkit-scrollbar-button
+{
+    height: 5px;
+}
+nav > ul::-webkit-scrollbar-thumb
+{
+    background: rgb(255, 255, 255);
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+nav > ul::-webkit-scrollbar-track
+{
+    background: rgb(255, 255, 255);
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+nav > ul:hover::-webkit-scrollbar-thumb
+{
+    background: rgb(9, 205, 240);
+}
+nav > ul:hover::-webkit-scrollbar-track
+{
+    background: rgb(230, 230, 230);
+}
+nav > form
+{
+    height: 100%;
+}
+nav .btn-light
+{
+    cursor: pointer;
+    border-radius: 0;
+    height: 100%;
+    letter-spacing: 2.5px;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 700;
+    box-shadow: none;
+}
+.wrapper
+{
+    margin-left: 270px;
+    margin-right: 20px;
+    margin-top: 120px;
+}
+
+.tile-wrapper
+{
+    display: block;
+    display: flex;
+    flex-direction: column;
+}
+.tile-container li
+{
+    display: inline-block;
+    background: rgb(255, 255, 255);    
+    height: 130px;
+    border-radius: 10px;
+    width: 215px;
+    margin: 15px;
+    color: white;
+    box-shadow: 0 4px 9px 0 #dcdcdc;
+    transition: box-shadow 0.3s;
+    position: relative;
+}
+.tile-container li:hover
+{
+    box-shadow: 0 4px 9px 0 #b1b1b1;
+}
+.tile-text
+{
+    color: white;
+    font-size: 14px;
+    margin-top: 2px;
+    cursor: default;
+}
+.tile-number
+{
+    color: white;
+    font-size: 25px;
+    margin-top: 27px;
+    cursor: default;
+}
+.tile-view-more
+{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    text-decoration: none;
+    color: white;
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    height: 28px;
+    font-weight: 700;
+    transition: transform 0.3s;
+}
+.tile-view-more:hover
+{
+    transform: scale(1.05);
+}
+
+.home-wrapper
+{
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr 1fr;
+}
+.announcements
+{
+    margin-top: 8px;
+    margin-bottom: 40px;
+    width: 100%;   
+}
+.announcements h1, .news-wrapper h1
+{
+    color: rgb(112, 112, 112);
+    text-align: center;
+    font-size: 17px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    cursor: default;
+}
+
+.news-wrapper
+{
+    margin-bottom: 40px;
+    width: 100%;
+}
+.news-card
+{
+    overflow: hidden;
+    background: white;
+    border-radius: 10px;
+    color: rgb(83, 83, 83);
+    box-shadow: 0 4px 9px 0 #dcdcdc;
+    transition: box-shadow 0.3s;
+    margin-top: 25px;
+    cursor: pointer;
+}
+.news-card:hover
+{
+    box-shadow: 0 4px 9px 0 #b1b1b1;
+}
+.news-content
+{
+    padding: 20px 20px 20px 20px;
+}
+.news-title
+{
+    color: rgb(80, 80, 80);
+    font-weight: 600;
+}
+.news-desc
+{
+    font-size: 15px;
+    padding-top: 13px;
+    color: #888888;
+}
+
+.news-source
+{
+    background: rgb(240, 240, 240);
+    padding: 8px 12px 8px 12px;
+    font-size: 14px;
+}
+
+
+.card li
+{
+    background: white;
+    border-radius: 10px;
+    color: #888888;
+    box-shadow: 0 4px 9px 0 #dcdcdc;
+    transition: box-shadow 0.3s;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.card li:hover
+{
+    box-shadow: 0 4px 9px 0 #b1b1b1;
+}
+
+.card-header
+{
+    color: rgb(80, 80, 80);
+    font-weight: 600;
+    cursor: default;
+}
+
+.card-text
+{
+    color: rgb(151, 151, 151);
+    padding: 10px 0px 0px 0px;
+    white-space: pre-wrap;
+    cursor: default;
+}
+
+.editor
+{
+    background: black;
+    width: 300px;
+    height: 100%;
+    right: 0;
+    position: relative;
+}
+.message-wrapper
+{
+    position: absolute;
+    top: 15px;
+    left: 0;
+    right: 0;
+    z-index: 150;
+    position: fixed;
+}
+.success
+{
+    background: rgba(0, 148, 123, 0.95);
+    border-radius: 10px;
+    color: #ffffff;
+    padding: 15px;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: 500;
+
+    animation-name: message;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+.error
+{
+    background: rgba(255, 89, 103,0.95);
+    border-radius: 10px;
+    color: #ffffff;
+    padding: 15px;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: 500;
+
+    animation-name: message;
+    animation-iteration-count: 1;
+    animation-delay: 1.5s;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+
+button .btn-light
+{
+    display: block;
+    width: 100%;
+}
+
+.tile-container li > div
+{
+    background: #ffffff;
+    float: left;
+    border-radius: 5px;
+    height: 50px;
+    width: 50px;
+    margin-left: 25px;
+    margin-top: 25px;
+    margin-right: 20px;
+    position:relative;
+}
+.tile-container li:nth-child(1)
+{
+    background: rgb(0, 183, 255);
+}
+.tile-container li:nth-child(2)
+{
+    background: rgb(255, 188, 43);
+}
+.tile-container li:nth-child(3)
+{
+    background: rgb(90, 90, 90);
+}
+.tile-container li:nth-child(4)
+{
+    background: rgb(162, 119, 189);
+}
+.tile-container li:nth-child(5)
+{
+    background: #dc3d44;
+}
+.tile-container li:nth-child(6)
+{
+    background: #358daf;
+}
+.tile-container li:nth-child(7)
+{
+    background: #404e82;
+}
+.tile-container li:nth-child(8)
+{
+    background: #ff7945;
+}
+
+.tile-container li > div
+{
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.tile-container i
+{
+    color: white;
+    font-size: 20px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+input[type=date]::-webkit-inner-spin-button,input[type=time]::-webkit-inner-spin-button
+{
+    -webkit-appearance: none;
+    display: none;
+}
+input[type=date]::-webkit-calendar-picker-indicator
+{
+    -webkit-appearance: none;
+    display: none;
+}
+input[type=date]::-webkit-clear-button,input[type=time]::-webkit-clear-button
+{
+    -webkit-appearance: none;
+    display: none;
+}
+.slider
+{
+    /*transform: translate(110%);*/
+    background: #202020;
+    position: fixed;
+    right: 0;
+    height: 100%;
+    top: 0;
+    width: 60%;
+    z-index: 100;
+    -webkit-box-shadow: 52px 0px 8px 56px rgba(0, 0, 0, 0.98);
+    -moz-box-shadow: 52px 0px 8px 56px rgba(0, 0, 0, 0.98);
+    box-shadow: 52px 0px 8px 56px rgba(0, 0, 0, 0.98);
+    transition: 0.4s;
+}
+.slider.hide
+{
+    transform: translate(110%);
+}
+.slider > div:first-child
+{
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    align-items: center;
+}
+#slider, #myslider
+{
+    display: grid;
+    grid-template-rows: 100px 1fr 70px;
+}
+#slider2
+{
+    display: grid;
+    grid-template-rows: 100px 1fr;
+}
+#slider > div:nth-child(2), #myslider > div:nth-child(2)
+{
+    padding: 0 25px;
+}
+#slider2 > div:nth-child(2)
+{
+    padding: 25px;
+    overflow-y: auto;
+}
+#slider > div:last-child
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#myslider > div:last-child
+{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+#slider:target,#slider2:target,#myslider:target
+{
+    /*transform: translate(0);*/
+}
+.slider .btn-light
+{
+    box-shadow: none;
+    border-radius: 0;
+    cursor: pointer;
+    height: 1fr;
+    font-size: 20px;
+    width: 1fr;
+}
+.slider .btn-dark
+{
+    box-shadow: none;
+    border-radius: 0;
+    bottom: 0;
+    width: 1fr;
+    cursor: pointer;
+    height: 1fr;
+    font-size: 20px;
+}
+.slider div::-webkit-scrollbar
+{
+    width: 10px;
+}
+.slider div::-webkit-scrollbar-thumb
+{
+    background: rgb(104, 104, 104);
+}
+.slider h1
+{
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    font-size: 25px;
+    letter-spacing: 8px;
+    clear: both;
+    cursor: default;
+}
+.slider div:first-child .btn-dark
+{
+    box-shadow: none;
+    margin: 0 0 0 30px;
+    width: auto;
+    font-size: 13px;
+    cursor: pointer;
+}
+.slider div:first-child i
+{
+    display: inline-block;
+    color: white;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 30px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.slider div:first-child i:hover
+{
+    transform: scale(1.6);
+    /*animation-name: rotate;
+    animation-iteration-count: infinite;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+    animation-duration: 3s;*/
+}
+.slider div:first-child i:active
+{
+    transform: scale(1);
+}
+.select-style {
+    border: 1px solid #ccc;
+    width: 120px;
+    border-radius: 3px;
+    overflow: hidden;
+    background: #fafafa url("img/icon-select.png") no-repeat 90% 50%;
+}
+.slider .schedule-card
+{
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0px;
+    margin-left: 25px;
+    margin-top: 25px;
+    background: #292929;
+    transition: 0.2s;
+}
+.slider .schedule-card:hover
+{
+    transform: scale(1.1);
+}
+.slider .schedule-card-footer
+{
+    background: #252525;
+    color: rgb(158, 158, 158);
+}
+.slider .schedule-card-batch
+{
+    color: #919191;
+}
+.slider .schedule-card-lect
+{
+    color: rgb(206, 206, 206);
+}
+.schedule-card-dark-container
+{
+    height: 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+.schedule-card-dark-container *
+{
+    cursor: default;
+}
+.borrow-list
+{
+    min-height: 50px;
+    height: auto;
+}
+.schedule-card-dark
+{
+    background: #292929;
+    display: grid;
+    padding: 0;
+    min-width: 200px;
+    width: auto;
+    margin: 7px;
+    padding: 15px;
+    line-height: 1.6em;
+    transition: transform .3s;
+}
+.schedule-card-dark:hover
+{
+    transform: scale(1.1);
+}
+.schedule-card-dark > .batch
+{
+    color: white;
+    font-size: 17px;
+    font-weight: 500;
+}
+.schedule-card-dark > .day
+{
+    color: white;
+    font-size: 21px;
+    font-weight: 700;
+}
+.schedule-card-dark > .time
+{
+    color: white;
+}
+.schedule-card
+{  
+    display: inline-block;
+    overflow: hidden;
+    background: white;
+    border-radius: 10px;
+    color: #616161;
+    box-shadow: 0 4px 9px 0 #dcdcdc;
+    transition: box-shadow 0.3s;
+    margin-top: 25px;
+    margin-right: 10px;
+    cursor: pointer;
+    width: 200px;
+    max-height: 139px;
+    line-height: 30px;
+}
+
+.schedule-card:hover
+{
+    box-shadow: 0 4px 9px 0 #b1b1b1;
+}
+.schedule-card-batch
+{
+    display: block;
+    margin: 5px 15px 5px 15px;
+    font-weight: 700;
+    color: #919191;
+}
+.schedule-card-lect
+{
+    display: block;
+    margin: 15px 15px 23px 15px;
+    font-size: 20px;
+    color: rgb(80, 80, 80);
+    font-weight: 700;
+    overflow:hidden; 
+    white-space:nowrap; 
+    text-overflow: ellipsis;
+}
+.schedule-card-luname
+{
+    display: none;
+}
+.schedule-card-footer
+{
+    background: #f0f0f0;
+    position: relative;
+    bottom: 0;
+    padding: 3px 10px 3px 10px;
+    font-size: 14px;
+}
+.schedule-card-time
+{
+    float: right
+}
+
+.slider p{
+    color: white;
+    font-size: 15px;
+}
+#login-form .textbox
+{
+    margin: auto;
+    margin-bottom: 15px;
+    position: relative;
+    display: block;
+    width: 230px;
+}
+#login
+{
+    margin: auto;
+    margin-top: 20px;
+    width: 100%;
+    display: block;
+    cursor: pointer;
+}
+#signup
+{
+    margin: auto;
+    margin-top: 5px;
+    width: 100%;
+    display: block;
+    cursor: pointer;
+}
+.wrong-cred
+{
+    color: rgb(255, 0, 64);
+    margin-top: 20px;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    display: none;
+    position: absolute;
+}
+.my-details-container
+{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 99;
+}
+.my-details-card
+{
+    cursor: pointer;
+    width: auto;
+    background-color: rgb(9, 205, 240);
+    border-radius: 60px;
+    color: white;
+    text-align: right;
+    padding: 8px 23px 8px 23px;
+    box-shadow: 0 0 7px 0 #d8d8d8;
+    line-height: 20px;
+    transition: 0.2s;
+}
+.my-details-card:hover
+{
+    background-color: rgb(9, 170, 199);
+    transform: scale(1.05);
+}
+.my-details-card-header
+{
+    font-weight: 700;
+    font-size: 15px;
+}
+.my-details-card-text
+{
+    font-size: 13px;
+}
+label
+{
+    display: inline-block;
+    font-size: 12px;
+    width: 100%;
+}
+.slider label
+{
+    color: white;
+    padding-left: 10px;
+}
+.slider ::placeholder
+{
+    color: #636363;
+}
+.schedule-container
+{
+    margin-bottom: 30px;
+}
+.schedule-container > input[type=search]
+{
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 4px 9px 0 #dcdcdc;
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance:none;
+}
+option
+{
+    color: black;
+}
+.slider .yuz-select
+{
+    background: transparent;
+    border-radius: 0;
+}
+.slider .yuz-select:hover text
+{
+    color: rgb(255, 255, 255);
+}
+.slider .yuz-select text
+{
+    font: inherit;
+    color: rgb(110, 110, 110);
+}
+.context
+{
+    position: absolute;
+    min-width: 140px;
+    width: auto;
+    background: white;
+    box-shadow: 0 0 15px 2px #d8d8d8;
+    border-radius: 5px;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    z-index: 101;
+    padding: 8px 0;
+}
+.context > div
+{
+    padding: 7px 13px;
+    font-size: 13px;
+    transition: .2s;
+}
+.context > div:hover
+{  
+    background: #383838;
+    color: white;
+    cursor: pointer;
+}
+.context.dark
+{
+    border-radius: 0;
+    box-shadow: none;
+    background:rgb(54, 54, 54);
+}
+.context.dark > div
+{
+    color: white;
+    background: rgb(54, 54, 54);
+}
+.context.dark > div:hover
+{
+    background: rgb(9, 205, 240);
+}
+input[type=file]
+{
+    appearance: none;
+}
+.dropbox
+{
+    background: #eeeeee;
+    text-align: center;
+    padding: 30px;
+    border: dotted rgb(184, 184, 184) 2px;
+    color: #a8a8a8;
+    border-radius: 5px;
+    font-weight: 800;
+    transition: .3s;
+}
+.dropbox.drag
+{
+    background: rgb(83, 83, 83);
+    color: white;
+}

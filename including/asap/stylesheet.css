@@ -1,0 +1,64 @@
+@font-face {
+    font-family: 'Asap';
+    src: url('Asap-BoldItalic.woff2') format('woff2'),
+        url('Asap-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Asap';
+    src: url('Asap-Italic.woff2') format('woff2'),
+        url('Asap-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Asap';
+    src: url('Asap-Medium.woff2') format('woff2'),
+        url('Asap-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Asap';
+    src: url('Asap-Regular.woff2') format('woff2'),
+        url('Asap-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Asap';
+    src: url('Asap-SemiBold.woff2') format('woff2'),
+        url('Asap-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Asap';
+    src: url('Asap-SemiBoldItalic.woff2') format('woff2'),
+        url('Asap-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Asap';
+    src: url('Asap-Bold.woff2') format('woff2'),
+        url('Asap-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Asap';
+    src: url('Asap-MediumItalic.woff2') format('woff2'),
+        url('Asap-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+}
+

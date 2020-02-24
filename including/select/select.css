@@ -1,0 +1,90 @@
+.yuz-select
+{
+    width: 300px;
+    font-size: 13px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 10px 0;
+    padding-right: 30px;
+    width: 100%;
+    cursor: pointer;
+    background: url(arrow.png) no-repeat calc(100% - 15px) 50%/8px 8px;
+    background-color: white;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space:nowrap; 
+}
+.yuz-select-ul
+{
+    position: absolute;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 250;
+    max-height: 400px;
+    overflow-y: auto;
+}
+.yuz-select-li
+{
+    display: block;
+    padding: 11px;
+    max-width: 100%;
+    word-wrap: break-word;
+    background: #f3f3f3;
+    cursor: pointer;
+    transition: 0.2s;
+    font: inherit;
+}
+.dark > .yuz-select-li
+{
+    background: rgb(54, 54, 54);
+    color: white;
+}
+.yuz-select-li:hover
+{
+    background: rgb(9, 205, 240);
+    color: white;
+}
+.yuz-select-ul::-webkit-scrollbar
+{
+    width: 4px;
+}
+.yuz-select-ul::-webkit-scrollbar-button
+{
+    height: 5px;
+}
+.yuz-select-ul::-webkit-scrollbar-thumb
+{
+    background: rgb(9, 205, 240);
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+.yuz-select-ul::-webkit-scrollbar-track
+{
+    background: rgb(230, 230, 230);
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+.yuz-select span
+{
+    display: none;
+}
+.yuz-select[disabled]
+{
+    background-color: rgb(241, 241, 241);
+}
+.yuz-select:hover text
+{
+    color: black;
+}
+.yuz-select text
+{
+    font: inherit;
+    color: rgb(110, 110, 110);
+    transition: .2s;
+    pointer-events: none;
+}
+.dark > text
+{
+    color: #858585;
+}
